@@ -1,88 +1,126 @@
-# musaid (মুসাইড)
+# musaid
 
-**musaid** — সম্পূর্ণ অফলাইন বাংলা অ্যান্ড্রয়েড অ্যাপ: ডেইলি রুটিন, বাংলা ভয়েস অ্যালার্ম,
-অভ্যাস/চেকলিস্ট, টার্গেট ও লক্ষ্য, দৈনিক রিপোর্ট ও মাসিক সারাংশ — সব এক জায়গায়।
+**musaid** is a free, 100% offline **Bangla** Android app for everyday life —
+daily routines with spoken voice alarms, habits, goals, and monthly reports.
 
-- **১০০% অফলাইন** — ইন্টারনেট পারমিশনই নেই, কোনো সার্ভার/অ্যাপি নেই; ডেটা শুধু আপনার ফোনে
-- **১০০% বাংলা UI** — অ্যালার্ম বাংলা টিটস (TTS) ভয়েসে পড়ে শোনায়
-- **নিরাপদ** — কোনো অ্যাকাউন্ট/লগইন নেই, কোনো ডেটা বাইরে যায় না
-
----
-
-## ডাউনলোড ও ইনস্টল
-
-### পদ্ধতি ১ — Releases থেকে (সহজ, সবার জন্য)
-
-1. এই পেজের ডানপাশে **Releases** সেকশনে যান (<https://github.com/nurulhudaturag-droid/Musaid-Android-App/releases>)
-2. সর্বশেষ রিলিজ থেকে APK ফাইলটি ডাউনলোড করুন
-3. ফাইলে ট্যাপ করে **ইনস্টল** করুন
-   - প্রথমবার "অজানা অ্যাপ ইনস্টল করা যাবে না" দেখালে → **সেটিংস** → অনুমতি চালু করুন → আবার ইনস্টল করুন
-4. অ্যাপ খুলুন, প্রথমবার চাইলে **নোটিফিকেশন** ও **অ্যালার্ম** অনুমতি দিন — না দিলে ভয়েস অ্যালার্ম বাজবে না
-
-### পদ্ধতি ২ — GitHub Actions থেকে (ডেবাগ APK, যখন রিলিজ নেই)
-
-1. এই পেজের **Actions** ট্যাব → সর্বশেষ **CI** রানে ক্লিক করুন
-2. নিচে **Artifacts** → `musaid-debug-apk` ডাউনলোড করুন (GitHub লগইন লাগবে)
-3. ZIP থেকে APK বের করে ইনস্টল করুন (পদ্ধতি ১-এর ৩ ও ৪ নম্বর ধাপ এখানেও প্রযোজ্য)
+- **No internet needed** — works fully offline
+- **No account, no ads, no tracking** — your data never leaves your phone
+- **Bangla voice alarms** — the alarm reads your message out loud in Bangla
 
 ---
 
-## ব্যবহার বিধি
+## Download the app
 
-### রুটিন (প্রতিদিনের সময়সূচি)
+**Latest version: v1.0**
 
-- রুটিন ট্যাব → **+** → শিরোনাম, সময়, কী বলবে (বার্তা), কোন কোন দিনে চালু হবে → **সংরক্ষণ**
-- ঠিক সময়ে নোটিফিকেশন আসবে + বাংলা ভয়েসে বার্তাটি পড়ে শোনাবে
-- দিন বাদ দিতে বা অ্যালার্ম বন্ধ করতে কার্ডের **⋮** মেনু ব্যবহার করুন
+[Download musaid-v1.0.apk directly](https://github.com/nurulhudaturag-droid/Musaid-Android-App/releases/download/v1.0/musaid-v1.0.apk)
 
-### টার্গেট (লক্ষ্য ও ধাপ)
+Or copy this link and paste it into your browser:
 
-- টার্গেট ট্যাব → **+** → লক্ষ্যের নাম, শুরু ও লক্ষ্যের তারিখ, চাইলে প্রেরণামূলক বার্তা
-- টার্গেট খুলে ধাপ (step) যোগ করুন — প্রতিটি ধাপের নিজস্ব তারিখ ও রিমাইন্ডার দেওয়া যায়
-- ধাপ শেষ হলে **✓** দিন — সব ধাপ শেষ হলে টার্গেট সম্পন্ন হবে (অভিনন্দন সূচক পপ-আপ)
-- উপরের ফিল্টার দিয়ে চলমান / সম্পন্ন / বিরতি টার্গেট আলাদা করে দেখুন
-
-### চেকলিস্ট (অভ্যাস)
-
-- চেকলিস্ট ট্যাব → **+** → অভ্যাসের নাম → সংরক্ষণ
-- প্রতিদিন টিক দিন — ক্রম অব্যাহত রাখা সহজ
-
-### রিপোর্ট (দৈনিক)
-
-- আজকের রুটিন/চেকলিস্ট কতটুকু হয়েছে টিক দিন
-- উপরের তারিখ বদলেয়ে আগের দিনগুলোর রিপোর্ট দেখা/ঠিক করা যায়; ৩০ দিনের হিস্টোরি থাকে
-
-### সারাংশ (মাসিক)
-
-- সারাংশ ট্যাবে মাস ধরে রুটিন ও টার্গেটের সফলতার হার দেখুন
-
-### হোম স্ক্রিন উইজেট
-
-- ফোনের হোম স্ক্রিনে লং-প্রেস → **উইজেট** → musaid → পরবর্তী রুটিন সরাসরি দেখুন
-
-### সেটিংস ও ব্যাকআপ (⚙ আইকন)
-
-- দৈনিক রিপোর্ট নোটিফিকেশনের সময় বদলান
-- **ব্যাকআপ এক্সপোর্ট** — সব ডেটা JSON ফাইলে সেভ করুন; **ইমপোর্ট** দিয়ে ফোন বদলালে ফিরিয়ে আনুন
-- অ্যালার্ম কাজ না করলে **অ্যালার্ম রিশিডিউল** চাপুন
-
----
-
-## নোট
-
-- ডেটা শুধু ফোনে থাকে — ফোন রিসেট বা আনইনস্টলের আগে অবশ্যই ব্যাকআপ এক্সপোর্ট করে নিন
-- ফোনের "ব্যাটারি অপটিমাইজেশন" থেকে musaid বাদ দিলে অ্যালার্ম সময়মতো বাজবে
-- ডেবাগ APK দিয়ে ইনস্টল করা থাকলে পরে সিগনড রিলিজ APK ইনস্টল করতে আগেটি আনইনস্টল করতে হবে
-
----
-
-## ডেভেলপার
-
-```bash
-./gradlew :app:assembleDebug        # ডেবাগ APK
-./gradlew :app:assembleRelease      # সিগনড রিলিজ APK (CI এ signed রিলিজ)
-./gradlew :app:testDebugUnitTest    # টেস্ট + স্ক্রিনশট টেস্ট
+```
+https://github.com/nurulhudaturag-droid/Musaid-Android-App/releases/download/v1.0/musaid-v1.0.apk
 ```
 
-- minSdk 24, compileSdk 36, Kotlin + Jetpack Compose + Room — কোনো নেটওয়ার্ক লাইব্রেরি নেই
-- CI: প্রতিটি push-এ টেস্ট + ডেবাগ APK; `v*` ট্যাগে সিগনড রিলিজ APK (GitHub Release-এ যুক্ত হয়)
+**All releases (every version, old and new):**
+
+[Open the Releases page](https://github.com/nurulhudaturag-droid/Musaid-Android-App/releases) or copy this link:
+
+```
+https://github.com/nurulhudaturag-droid/Musaid-Android-App/releases
+```
+
+New updates will be published on the Releases page, so check it from time to time.
+
+---
+
+## Install the app (about 1 minute)
+
+1. Download the APK using one of the links above.
+2. Open the downloaded file and tap **Install**.
+3. If Android shows **"For your security, your phone is not allowed to install unknown apps from this source"**:
+   - Tap **Settings**
+   - Turn on **Allow from this source**
+   - Go back and tap **Install** again
+4. Open **musaid**.
+5. Allow **Notifications** and **Alarms/Reminders** when asked — without these, voice alarms will not ring.
+
+> Already have an older or test version installed? Uninstall it first, then install this release — Android blocks updates when two versions are signed with different keys.
+
+---
+
+## How to use musaid
+
+The app has 5 tabs at the bottom of the screen:
+
+| Tab (as shown in the app) | What it is for |
+|---|---|
+| **রুটিন (Routine)** | Daily timed tasks with voice alarms |
+| **টার্গেট (Target)** | Goals broken into steps, with reminders |
+| **চেকলিস্ট (Checklist)** | Daily habits — tick them off every day |
+| **রিপোর্ট (Report)** | Daily progress report |
+| **সারাংশ (Summary)** | Monthly progress overview |
+
+### Daily routine with a voice alarm
+
+1. Open the **রুটিন (Routine)** tab.
+2. Tap the **+** button.
+3. Type a **title** (for example "Fajr prayer") and a **message** — this is exactly what the voice will say.
+4. Set the **time** and choose which **days** it should ring.
+5. Tap **Save**.
+6. At the set time you get a notification, and the app **speaks your message in Bangla**.
+
+- To edit or remove a routine, tap the **⋮** menu on its card.
+- Tip: grant the alarm permission Android asks for, otherwise the alarm will not ring.
+
+### Goals (টার্গেট)
+
+1. Open the **টার্গেট (Target)** tab and tap **+**.
+2. Enter the goal name, start date, and target date (plus an optional motivating message).
+3. Open the goal and add **steps** — each step can have its own date and reminder.
+4. Tick a step when it is done. When **all steps are done**, the goal is marked complete automatically.
+5. Use the filter chips at the top to show only running, completed, or paused goals.
+
+### Daily habits (চেকলিস্ট)
+
+1. Open the **চেকলিস্ট (Checklist)** tab and tap **+**.
+2. Type the habit name and tap **Save**.
+3. Every day, tick the box to keep your streak going.
+
+### Daily report (রিপোর্ট)
+
+1. Open the **রিপোর্ট (Report)** tab.
+2. Tick which routines and habits you finished **today**.
+3. Tap the date at the top to view or correct **past days** — the last 30 days are always stored.
+
+### Monthly summary (সারাংশ)
+
+Open the **সারাংশ (Summary)** tab and move between months to see your success rate for routines and goals.
+
+### Home screen widget
+
+1. Long-press an empty spot on your home screen.
+2. Choose **Widgets**, find **musaid**, and place it.
+3. The widget always shows your **next routine**.
+
+### Settings, backup and report time (gear icon, top-right)
+
+- **Report time** — change when the daily report notification appears (default 21:00).
+- **Export backup** — saves all your data as a JSON file on your phone.
+- **Import backup** — restores that file (use it after buying a new phone).
+- **Reschedule alarms** — fixes alarms if they stopped ringing, for example after a reboot.
+
+---
+
+## Important tips
+
+- **Backup regularly:** all data lives only on this phone. Before resetting or changing your phone, use **Export backup**.
+- **Battery optimization:** if alarms are late or silent, remove musaid from battery optimization (Settings → Apps → musaid → Battery → Unrestricted). On Xiaomi/MIUI-style phones also enable **Auto-start** if your phone offers it.
+- **Permissions:** notifications and the alarm permission are required for voice alarms; the app asks for them on first launch.
+
+---
+
+## For developers
+
+- Kotlin 2.2 + Jetpack Compose + Room, minSdk 24 / targetSdk 36. **No internet permission** — the app is fully offline by design.
+- Build: `./gradlew :app:assembleDebug` · Test: `./gradlew :app:testDebugUnitTest`
+- Every push runs CI (tests + debug APK). A `v*` tag builds a **signed release** and attaches the APK to the GitHub Release.
