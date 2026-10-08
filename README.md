@@ -1,65 +1,88 @@
-# musaid
+# musaid (মুসাইড)
 
-musaid — একটি সম্পূর্ণ অফলাইন বাংলা অ্যান্ড্রয়েড অ্যাপ ডেইলি রুটিন, ভয়েস অ্যালার্ম,
-অভ্যাস/চেকলিস্ট, টার্গেট ও লক্ষ্য, দৈনিক রিপোর্ট ও মাসিক সারাংশ ব্যবস্থাপনার জন্য।
+**musaid** — সম্পূর্ণ অফলাইন বাংলা অ্যান্ড্রয়েড অ্যাপ: ডেইলি রুটিন, বাংলা ভয়েস অ্যালার্ম,
+অভ্যাস/চেকলিস্ট, টার্গেট ও লক্ষ্য, দৈনিক রিপোর্ট ও মাসিক সারাংশ — সব এক জায়গায়।
 
-- **100% offline** — ইন্টারনেট পারমিশন নেই, কোনো সার্ভার/অ্যাপি কল নেই
-- **১০০% বাংলা UI** — বাংলা টিটস (TTS) ভয়েসে অ্যালার্ম পড়ে শোনায়
-- Local Room database + JSON backup (export/import)
+- **১০০% অফলাইন** — ইন্টারনেট পারমিশনই নেই, কোনো সার্ভার/অ্যাপি নেই; ডেটা শুধু আপনার ফোনে
+- **১০০% বাংলা UI** — অ্যালার্ম বাংলা টিটস (TTS) ভয়েসে পড়ে শোনায়
+- **নিরাপদ** — কোনো অ্যাকাউন্ট/লগইন নেই, কোনো ডেটা বাইরে যায় না
 
-## Features
+---
 
-- ডেইলি রুটিন — নির্দিষ্ট সময়ে সঠিক অ্যালার্ম, বাংলা ভয়েস উচ্চারণ, সাপ্তাহিক দিন নির্বাচন
-- টার্গেট ও লক্ষ্য — ধাপে ধাপে স্টেপ, রিমাইন্ডার, অগ্রগতি ট্র্যাকিং
-- অভ্যাস ও চেকলিস্ট — দৈনিক টিক দেওয়া
-- দৈনিক রিপোর্ট ও মাসিক সারাংশ
-- হোম স্ক্রিন উইজেট (Glance)
-- JSON ব্যাকআপ এক্সপোর্ট/ইমপোর্ট
+## ডাউনলোড ও ইনস্টল
 
-## Requirements
+### পদ্ধতি ১ — Releases থেকে (সহজ, সবার জন্য)
 
-- JDK 21+ (CI uses 21 — Robolectric SDK 36 tests require Java 21)
-- Android SDK (compileSdk 36)
-- Android Studio (বা যেকোনো Gradle-supported IDE) — প্রথমবার ওপেন করলে IDE নিজে `local.properties` বানিয়ে দেবে
+1. এই পেজের ডানপাশে **Releases** সেকশনে যান (<https://github.com/nurulhudaturag-droid/Musaid-Android-App/releases>)
+2. সর্বশেষ রিলিজ থেকে APK ফাইলটি ডাউনলোড করুন
+3. ফাইলে ট্যাপ করে **ইনস্টল** করুন
+   - প্রথমবার "অজানা অ্যাপ ইনস্টল করা যাবে না" দেখালে → **সেটিংস** → অনুমতি চালু করুন → আবার ইনস্টল করুন
+4. অ্যাপ খুলুন, প্রথমবার চাইলে **নোটিফিকেশন** ও **অ্যালার্ম** অনুমতি দিন — না দিলে ভয়েস অ্যালার্ম বাজবে না
 
-## Build
+### পদ্ধতি ২ — GitHub Actions থেকে (ডেবাগ APK, যখন রিলিজ নেই)
+
+1. এই পেজের **Actions** ট্যাব → সর্বশেষ **CI** রানে ক্লিক করুন
+2. নিচে **Artifacts** → `musaid-debug-apk` ডাউনলোড করুন (GitHub লগইন লাগবে)
+3. ZIP থেকে APK বের করে ইনস্টল করুন (পদ্ধতি ১-এর ৩ ও ৪ নম্বর ধাপ এখানেও প্রযোজ্য)
+
+---
+
+## ব্যবহার বিধি
+
+### রুটিন (প্রতিদিনের সময়সূচি)
+
+- রুটিন ট্যাব → **+** → শিরোনাম, সময়, কী বলবে (বার্তা), কোন কোন দিনে চালু হবে → **সংরক্ষণ**
+- ঠিক সময়ে নোটিফিকেশন আসবে + বাংলা ভয়েসে বার্তাটি পড়ে শোনাবে
+- দিন বাদ দিতে বা অ্যালার্ম বন্ধ করতে কার্ডের **⋮** মেনু ব্যবহার করুন
+
+### টার্গেট (লক্ষ্য ও ধাপ)
+
+- টার্গেট ট্যাব → **+** → লক্ষ্যের নাম, শুরু ও লক্ষ্যের তারিখ, চাইলে প্রেরণামূলক বার্তা
+- টার্গেট খুলে ধাপ (step) যোগ করুন — প্রতিটি ধাপের নিজস্ব তারিখ ও রিমাইন্ডার দেওয়া যায়
+- ধাপ শেষ হলে **✓** দিন — সব ধাপ শেষ হলে টার্গেট সম্পন্ন হবে (অভিনন্দন সূচক পপ-আপ)
+- উপরের ফিল্টার দিয়ে চলমান / সম্পন্ন / বিরতি টার্গেট আলাদা করে দেখুন
+
+### চেকলিস্ট (অভ্যাস)
+
+- চেকলিস্ট ট্যাব → **+** → অভ্যাসের নাম → সংরক্ষণ
+- প্রতিদিন টিক দিন — ক্রম অব্যাহত রাখা সহজ
+
+### রিপোর্ট (দৈনিক)
+
+- আজকের রুটিন/চেকলিস্ট কতটুকু হয়েছে টিক দিন
+- উপরের তারিখ বদলেয়ে আগের দিনগুলোর রিপোর্ট দেখা/ঠিক করা যায়; ৩০ দিনের হিস্টোরি থাকে
+
+### সারাংশ (মাসিক)
+
+- সারাংশ ট্যাবে মাস ধরে রুটিন ও টার্গেটের সফলতার হার দেখুন
+
+### হোম স্ক্রিন উইজেট
+
+- ফোনের হোম স্ক্রিনে লং-প্রেস → **উইজেট** → musaid → পরবর্তী রুটিন সরাসরি দেখুন
+
+### সেটিংস ও ব্যাকআপ (⚙ আইকন)
+
+- দৈনিক রিপোর্ট নোটিফিকেশনের সময় বদলান
+- **ব্যাকআপ এক্সপোর্ট** — সব ডেটা JSON ফাইলে সেভ করুন; **ইমপোর্ট** দিয়ে ফোন বদলালে ফিরিয়ে আনুন
+- অ্যালার্ম কাজ না করলে **অ্যালার্ম রিশিডিউল** চাপুন
+
+---
+
+## নোট
+
+- ডেটা শুধু ফোনে থাকে — ফোন রিসেট বা আনইনস্টলের আগে অবশ্যই ব্যাকআপ এক্সপোর্ট করে নিন
+- ফোনের "ব্যাটারি অপটিমাইজেশন" থেকে musaid বাদ দিলে অ্যালার্ম সময়মতো বাজবে
+- ডেবাগ APK দিয়ে ইনস্টল করা থাকলে পরে সিগনড রিলিজ APK ইনস্টল করতে আগেটি আনইনস্টল করতে হবে
+
+---
+
+## ডেভেলপার
 
 ```bash
-./gradlew :app:assembleDebug        # debug APK
-./gradlew :app:assembleRelease      # release APK (signing env vars লাগবে)
-./gradlew :app:testDebugUnitTest    # unit + screenshot tests
+./gradlew :app:assembleDebug        # ডেবাগ APK
+./gradlew :app:assembleRelease      # সিগনড রিলিজ APK (CI এ signed রিলিজ)
+./gradlew :app:testDebugUnitTest    # টেস্ট + স্ক্রিনশট টেস্ট
 ```
 
-Release build signing: `ANDROID_KEYSTORE_PATH`, `ANDROID_KEYSTORE_PASSWORD`,
-`ANDROID_KEY_ALIAS`, `ANDROID_KEY_PASSWORD` environment variable দিতে হবে (path না
-দিলে `my-upload-key.jks` ব্যবহার হয়, alias না দিলে `upload`)।
-
-## CI / GitHub Actions
-
-- Push-e debug build + unit test চলে (`.github/workflows/build.yml`)
-- Tag push (`v*`) বা manual dispatch-e signed release APK তৈরি হয়
-- Repo **Settings → Secrets** এ এইগুলো রাখতে হবে (কোনো secret file-এ commit হবে না):
-  - `ANDROID_KEYSTORE_BASE64` — keystore file-এর base64 (`base64 -w0 my-upload-key.jks`)
-  - `ANDROID_KEYSTORE_PASSWORD`
-  - `ANDROID_KEY_ALIAS`
-  - `ANDROID_KEY_PASSWORD`
-
-Release keystore না থাকলে (secret-এর `ANDROID_KEY_ALIAS` alias-এর সাথে মিলতে হবে):
-
-```bash
-keytool -genkeypair -keystore my-upload-key.jks -storepass CHANGE_ME \
-  -keypass CHANGE_ME -alias upload -keyalg RSA -keysize 2048 \
-  -validity 10000 -dname "CN=Musaid, OU=Musaid, O=Musaid, C=BD"
-```
-
-## Project structure
-
-```
-app/src/main/java/qiubzen/musaid/
-├── MainActivity.kt
-├── data/        # Room entities, DAO, repository, backup
-├── viewmodel/   # AppViewModel, GoalViewModel, ReportViewModel, SummaryViewModel
-├── ui/          # Compose screens + theme
-├── alarm/       # AlarmScheduler, AlarmReceiver (TTS), BootReceiver
-└── widget/      # Glance home-screen widget
-```
+- minSdk 24, compileSdk 36, Kotlin + Jetpack Compose + Room — কোনো নেটওয়ার্ক লাইব্রেরি নেই
+- CI: প্রতিটি push-এ টেস্ট + ডেবাগ APK; `v*` ট্যাগে সিগনড রিলিজ APK (GitHub Release-এ যুক্ত হয়)
