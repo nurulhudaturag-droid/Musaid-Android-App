@@ -1,6 +1,6 @@
-# musaid
+# Musaid
 
-**musaid** is a free, 100% offline **Bangla** Android app for everyday life —
+**Musaid** is a free, 100% offline **Bangla** Android app for everyday life —
 daily routines with spoken voice alarms, habits, goals, and monthly reports.
 
 - **No internet needed** — works fully offline
@@ -41,14 +41,14 @@ New updates will be published on the Releases page, so check it from time to tim
    - Tap **Settings**
    - Turn on **Allow from this source**
    - Go back and tap **Install** again
-4. Open **musaid**.
+4. Open **Musaid**.
 5. Allow **Notifications** and **Alarms/Reminders** when asked — without these, voice alarms will not ring.
 
 > Already have an older or test version installed? Uninstall it first, then install this release — Android blocks updates when two versions are signed with different keys.
 
 ---
 
-## How to use musaid
+## How to use Musaid
 
 The app has 5 tabs at the bottom of the screen:
 
@@ -99,7 +99,7 @@ Open the **সারাংশ (Summary)** tab and move between months to see you
 ### Home screen widget
 
 1. Long-press an empty spot on your home screen.
-2. Choose **Widgets**, find **musaid**, and place it.
+2. Choose **Widgets**, find **Musaid**, and place it.
 3. The widget always shows your **next routine**.
 
 ### Settings, backup and report time (gear icon, top-right)
@@ -114,7 +114,7 @@ Open the **সারাংশ (Summary)** tab and move between months to see you
 ## Important tips
 
 - **Backup regularly:** all data lives only on this phone. Before resetting or changing your phone, use **Export backup**.
-- **Battery optimization:** if alarms are late or silent, remove musaid from battery optimization (Settings → Apps → musaid → Battery → Unrestricted). On Xiaomi/MIUI-style phones also enable **Auto-start** if your phone offers it.
+- **Battery optimization:** if alarms are late or silent, remove Musaid from battery optimization (Settings → Apps → Musaid → Battery → Unrestricted). On Xiaomi/MIUI-style phones also enable **Auto-start** if your phone offers it.
 - **Permissions:** notifications and the alarm permission are required for voice alarms; the app asks for them on first launch.
 
 ---
