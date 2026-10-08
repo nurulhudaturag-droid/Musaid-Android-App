@@ -87,7 +87,7 @@ class RoutineWidget : GlanceAppWidget() {
         ) {
             if (nextRoutine != null) {
                 Text(
-                    text = "পরবর্তী রুটিন (Next Routine)",
+                    text = "পরবর্তী রুটিন",
                     style = TextStyle(color = GlanceTheme.colors.onSurfaceVariant, fontSize = 14.sp)
                 )
                 
@@ -109,7 +109,7 @@ class RoutineWidget : GlanceAppWidget() {
                 )
             } else {
                 Text(
-                    text = "কোনো রুটিন নেই (No upcoming routine)",
+                    text = "কোনো রুটিন নেই",
                     style = TextStyle(color = GlanceTheme.colors.onSurface, fontSize = 16.sp)
                 )
             }

@@ -46,7 +46,7 @@ class AlarmReceiver : BroadcastReceiver() {
         when (intent.action) {
             ACTION_ROUTINE_ALARM -> {
                 val id = intent.getIntExtra(EXTRA_ROUTINE_ID, 0)
-                val title = intent.getStringExtra(EXTRA_ROUTINE_TITLE) ?: "Routine"
+                val title = intent.getStringExtra(EXTRA_ROUTINE_TITLE) ?: "রুটিন"
                 val message = intent.getStringExtra(EXTRA_ROUTINE_MESSAGE) ?: ""
 
                 showNotification(context, id + NOTIFICATION_ID_BASE, title, message, "routines")
@@ -113,6 +113,8 @@ class AlarmReceiver : BroadcastReceiver() {
             .setCategory(NotificationCompat.CATEGORY_ALARM)
             .setAutoCancel(true)
             .setContentIntent(pendingIntent)
+            // On Android 7.x (minSdk 24) a builder without defaults plays nothing;
+            .setDefaults(NotificationCompat.DEFAULT_ALL)
 
         notificationManager.notify(id, builder.build())
     }
